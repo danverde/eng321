@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        nav {
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .contentStuff {
+            color: white;
+            background-color: rebeccapurple;
+            padding: 56px;
+        }
+        
+        .contentStuff img{
+            margin: 20px 0;
+            width: 50vw;
+        }
+
+        div#daButton {
+            background-color: blue;
+            padding: 20px;
+        }
+
+        div#daButton:hover {
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 700px) {
+            * {
+                background-color: green;
+            }
+        }
+    </style>
+    <script>
+        function popup() {
+            window.alert("this is a test of the emergency popup system");
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <a href="#">Link 3</a>
+            <a href="#">Link 14</a>
+            <a href="#">Link 5</a>
+            <a href="#">Link 7</a>
+        </ul>
+    </nav>
+    <div class="contentStuff">
+        <p>I am full of content!!</p>
+        <div id="daButton" onclick="popup()">
+            SOY DA BUTTON!!!
+        </div>
+        <img src="mcLaren.jpg">
+        
+    </div>
+</body>
+
+</html>
