@@ -45,6 +45,7 @@ a {}
 }
 
 header {
+   z-index: 99;
    background-color: $color1;
    height: 75px;
    width: 100%;
@@ -81,23 +82,25 @@ main {
    section {
       min-height: 100vh;
       display: flex;
+      overflow: hidden;
+      
    }
 }
 
 #intro {
    align-items: center;
    justify-content: center;
+   position: relative;
    div {
       color: $color1;
       background-color: rgba(0, 0, 0, .6);
-      padding: 10vmin 20vmin;
       text-align: center;
-      max-width: 50vw;
+      height: 300px;
+      width: 700px;
    }
 }
 
 #about {}
-
 
 /* Parallax effect */
 
@@ -127,3 +130,16 @@ main {
 }
 
 /* TRANSITIONS */
+
+.scrollRight{
+   // WIDTH MUST BE KNOWN
+   margin: auto;
+   position: absolute;
+   left: 100vw;
+   transition: left 2s, right 2s;
+}
+
+.toCenter{
+   left: 0 !important;
+   right: 0 !important;
+}

@@ -5,9 +5,17 @@
    <meta charset="UTF-8">
    <link rel="stylesheet" type="text/css" href="css/style.css">
    <title>Document</title>
+   <script>
+      function toCenter(selector) {
+         var ele = document.querySelector(selector).classList.add('toCenter');
+         console.log('I Ran');
+      }
+
+      //document.domready(toCenter('#intro .scrollRight'));
+   </script>
 </head>
 
-<body>
+<body onload="toCenter('#intro .scrollRight')">
    <header class="all-caps">
       <nav>
          <span> Daniel Green</span>
@@ -19,13 +27,13 @@
    </header>
    <main>
       <section class="bg-img bg-1 all-caps" id="intro">
-         <div>
+         <div class="scrollRight">
             <h1 class="all-caps">&lt;Daniel Green/&gt;</h1>
             <h3>&lt;Front End Web developer/&gt;</h3>
          </div>
       </section>
 
-      <section claas="bg-content" id="about">
+      <section class="bg-content" id="about">
          <div>
             <h2>About Me</h2>
          </div>
