@@ -87,10 +87,10 @@ main {
 #about h2 {
   border-bottom: 1px solid #909090; }
 
-#about > div {
+.sectionWrapper {
   width: 100%;
-  max-width: 720px;
-  margin: 10vmin;
+  max-width: 800px;
+  margin: 10vmin auto;
   padding: 20px; }
 
 /* Parallax effect */

@@ -116,10 +116,10 @@ main {
     border-bottom: 1px solid $color3;
 }
 
-#about > div {
+.sectionWrapper {
     width:100%;
-    max-width: 720px;
-    margin: 10vmin;
+    max-width: 800px;
+    margin: 10vmin auto;
     padding :20px;
 }
 
