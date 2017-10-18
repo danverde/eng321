@@ -8,6 +8,14 @@ body {
 * {
   font-family: 'Roboto', sans-serif; }
 
+.emphasis {
+  color: #009f00;
+  font-weight: 700; }
+
+p {
+  text-indent: 2em;
+  font-size: 14pt; }
+
 /* End fonts */
 h1,
 h2,
@@ -20,6 +28,10 @@ h6 {
 
 h1 {
   font-size: 50pt; }
+
+h2 {
+  font-size: 30pt;
+  border-bottom: 1px solid #909090; }
 
 /* Default links */
 /* End  Links*/
@@ -72,6 +84,15 @@ main {
     height: 300px;
     width: 700px; }
 
+#about h2 {
+  border-bottom: 1px solid #909090; }
+
+#about > div {
+  width: 100%;
+  max-width: 720px;
+  margin: 10vmin;
+  padding: 20px; }
+
 /* Parallax effect */
 .bg-content {
   opacity: 0.9; }
@@ -98,7 +119,7 @@ main {
   margin: auto;
   position: absolute;
   left: 100vw;
-  transition: left 2s, right 2s; }
+  transition: left 1.5s, right 1.5s; }
 
 .toCenter {
   left: 0 !important;

@@ -1,21 +1,31 @@
 $color1: #009f00;
 $color2: lightgray;
+$color3: #909090;
 $opacity: .9;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 
 
 body {
-   margin: 0px;
-   padding: 0px;
-   box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
 }
 
 
 /* Default fonts */
 
 * {
-   font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.emphasis{
+    color: $color1;
+    font-weight:700;
+}
+p{
+    text-indent: 2em;
+    font-size: 14pt;
 }
 
 /* End fonts */
@@ -26,14 +36,17 @@ h3,
 h4,
 h5,
 h6 {
-   text-transform: uppercase;
-   color: $color1;
+    text-transform: uppercase;
+    color: $color1;
 }
 
 h1 {
-   font-size: 50pt;
+    font-size: 50pt;
 }
-
+h2{
+    font-size: 30pt;
+    border-bottom: 1px solid $color3
+}
 /* Default links */
 
 a {}
@@ -41,105 +54,113 @@ a {}
 /* End  Links*/
 
 .all-caps {
-   text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 header {
-   z-index: 99;
-   background-color: $color1;
-   height: 75px;
-   width: 100%;
-   border-bottom: 4px solid $color2;
-   position: fixed;
-   opacity: $opacity;
-   color: white;
-   nav {
-      margin-top: 3px;
-      font-size: 18pt;
-      height: 100%;
-      padding: 20px;
-      display: flex;
-      align-content: center;
-      justify-content: flex-end;
-      align-items: baseline;
-      span {
-         margin-right: auto;
-      }
-      a {
-         color: white;
-         font-size: 14pt;
-         margin: 0 15px;
-      }
-   }
+    z-index: 99;
+    background-color: $color1;
+    height: 75px;
+    width: 100%;
+    border-bottom: 4px solid $color2;
+    position: fixed;
+    opacity: $opacity;
+    color: white;
+    nav {
+        margin-top: 3px;
+        font-size: 18pt;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+        align-items: baseline;
+        span {
+            margin-right: auto;
+        }
+        a {
+            color: white;
+            font-size: 14pt;
+            margin: 0 15px;
+        }
+    }
 }
 
 /* individual sections */
 
 main {
-   margin: 0;
-   padding: 0;
-   background-color: $color2;
-   section {
-      min-height: 100vh;
-      display: flex;
-      overflow: hidden;
-      
-   }
+    margin: 0;
+    padding: 0;
+    background-color: $color2;
+    section {
+        min-height: 100vh;
+        display: flex;
+        overflow: hidden;
+    }
 }
 
 #intro {
-   align-items: center;
-   justify-content: center;
-   position: relative;
-   div {
-      color: $color1;
-      background-color: rgba(0, 0, 0, .6);
-      text-align: center;
-      height: 300px;
-      width: 700px;
-   }
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    div {
+        color: $color1;
+        background-color: rgba(0, 0, 0, .6);
+        text-align: center;
+        height: 300px;
+        width: 700px;
+    }
 }
 
-#about {}
+#about h2{
+    border-bottom: 1px solid $color3;
+}
+
+#about > div {
+    width:100%;
+    max-width: 720px;
+    margin: 10vmin;
+    padding :20px;
+}
 
 /* Parallax effect */
 
 .bg-content {
-   opacity: $opacity;
+    opacity: $opacity;
 }
 
 .bg-img {
-   min-height: 100vh;
-   background-size: cover;
-   background-attachment: fixed;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-color: $color2;
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $color2;
 }
 
 .bg-1 {
-   background-image: url('../images/img1.jpg');
+    background-image: url('../images/img1.jpg');
 }
 
 .bg-2 {
-   background-image: url('../images/img2.jpg');
+    background-image: url('../images/img2.jpg');
 }
 
 .bg-3 {
-   background-image: url('../images/img3.jpg');
+    background-image: url('../images/img3.jpg');
 }
 
 /* TRANSITIONS */
 
-.scrollRight{
-   // WIDTH MUST BE KNOWN
-   margin: auto;
-   position: absolute;
-   left: 100vw;
-   transition: left 2s, right 2s;
+.scrollRight {
+    // WIDTH MUST BE KNOWN
+    margin: auto;
+    position: absolute;
+    left: 100vw;
+    transition: left 1.5s, right 1.5s;
 }
 
-.toCenter{
-   left: 0 !important;
-   right: 0 !important;
+.toCenter {
+    left: 0 !important;
+    right: 0 !important;
 }
