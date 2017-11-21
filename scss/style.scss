@@ -10,38 +10,38 @@ $opacity: .9;
 
 
 body {
-   margin: 0px;
-   padding: 0px;
-   box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
 }
 
 .inline {
-   display: inline-block;
+    display: inline-block;
 }
 
 .floatRight {
-   float: right;
+    float: right;
 }
 
 /* Default fonts */
 
 * {
-   font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .emphasis {
-   color: $color1;
-   font-weight: 700;
+    color: $color1;
+    font-weight: 700;
 }
 
 p {
-   font-size: 14pt;
+    font-size: 14pt;
 }
 
 /* End fonts */
 
 ul li {
-   list-style: none;
+    list-style: none;
 }
 
 h1,
@@ -50,31 +50,31 @@ h3,
 h4,
 h5,
 h6 {
-   text-transform: uppercase;
-   color: $color1;
+    text-transform: uppercase;
+    color: $color1;
 }
 
 h1 {
-   font-size: 50pt;
+    font-size: 50pt;
 }
 
 h2 {
-   font-size: 30pt;
+    font-size: 30pt;
 }
 
 .headline {
-   border-bottom: 1px solid $underlineColor
+    border-bottom: 1px solid $underlineColor
 }
 
 /* Default links */
 
 a,
 a:visited {
-   color: green;
+    color: green;
 }
 
 a:hover {
-   color: $color1;
+    color: $color1;
 }
 
 /* End  Links*/
@@ -82,126 +82,131 @@ a:hover {
 /* Buttons */
 
 .button {
-   padding: 10px;
-   text-decoration: none;
-   background-color: green;
-   color: white;
-   border-radius: 7px;
-   cursor: pointer;
-   &:hover {
-      background-color: $color1; //border: 1px solid darkgreen;
-      color: white;
-   }
-   &:visited {
-      color: white;
-   }
+    padding: 10px;
+    text-decoration: none;
+    background-color: green;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    &:hover {
+        background-color: $color1; //border: 1px solid darkgreen;
+        color: white;
+    }
+    &:visited {
+        color: white;
+    }
 }
 
 /* End Buttons */
 
 .all-caps {
-   text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 header {
-   z-index: 99;
-   background-color: $color1;
-   height: 75px;
-   width: 100%;
-   border-bottom: 4px solid $color2;
-   position: fixed;
-   opacity: $opacity;
-   color: white;
-   nav {
-      margin-top: 3px;
-      font-size: 18pt;
-      height: 100%;
-      padding: 20px;
-      display: flex;
-      align-content: center;
-      justify-content: flex-end;
-      align-items: baseline;
-      span {
-         margin-right: auto;
-      }
-      a {
-         color: white;
-         font-size: 14pt;
-         margin: 0 15px;
-      }
-   }
+    z-index: 99;
+    background-color: $color1;
+    height: 75px;
+    width: 100%;
+    border-bottom: 4px solid $color2;
+    position: fixed;
+    opacity: $opacity;
+    color: white;
+    nav {
+        margin-top: 3px;
+        font-size: 18pt;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+        align-items: baseline;
+        span {
+            margin-right: auto;
+        }
+        a,
+        a:visited {
+            color: white;
+            font-size: 14pt;
+            margin: 0 15px;
+        }
+        a:hover {
+            color: $color3;
+        }
+    }
 }
 
 /* individual sections */
 
 main {
-   margin: 0;
-   padding: 0;
-   background-color: $color2;
-   section {
-      min-height: 100vh;
-      display: flex;
-      overflow: hidden;
-   }
+    margin: 0;
+    padding: 0;
+    background-color: $color2;
+    section {
+        min-height: 100vh;
+        display: flex;
+        overflow: hidden;
+    }
 }
 
 #intro {
-   align-items: center;
-   justify-content: center;
-   position: relative;
-   .scrollBox {
-      margin-top: -100px;
-      color: $color1;
-      background-color: rgba(0, 0, 0, .6);
-      text-align: center;
-      height: 300px;
-      width: 700px;
-   }
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .scrollBox {
+        margin-top: -100px;
+        color: $color1;
+        background-color: rgba(0, 0, 0, .6);
+        text-align: center;
+        height: 300px;
+        width: 700px;
+    }
 }
 
 #projects {
-   .scrollBox {
-      box-shadow: 10px 10px 5px #888888;
-      background-color: $color3;
-      color: black;
-      h2 {
-         margin: 0 0 auto auto;
-      }
-   }
+    .scrollBox {
+        box-shadow: 10px 10px 5px #888888;
+        background-color: $color3;
+        color: black;
+        h2 {
+            margin: 0 0 auto auto;
+        }
+    }
 }
 
 /* End Individual Sections */
 
 #about h2 {
-   border-bottom: 1px solid $underlineColor;
+    border-bottom: 1px solid $underlineColor;
 }
 
 /* Scrolling effect */
 
 .sectionWrapper {
-   position: relative; // border: 3px solid blue;
-   width: 100%;
-   max-width: $wrapperWidth;
-   margin: 10vmin auto;
+    position: relative; // border: 3px solid blue;
+    width: 100%;
+    max-width: $wrapperWidth;
+    margin: 10vmin auto;
 }
 
 .scrollBox {
-   z-index: 0;
-   opacity: 0;
-   position: absolute;
-   height: 100%;
-   width: 100%;
-   max-width: $wrapperWidth;
-   top: 0;
-   left: 100vw;
-   padding: 20px;
-   color: white; // remove me?
-   transition: all 1s;
+    z-index: 0;
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-width: $wrapperWidth;
+    top: -100vh;
+    left: 0;
+    padding: 20px;
+    color: white; // remove me?
+    transition: all 1s;
 }
 
 .moveIn {
-   opacity: 1;
-   left: 0px !important;
+    opacity: 1;
+    // left: 0px !important;
+    top: 0vh;
 }
 
 /* End Scrolling effect */
@@ -209,26 +214,26 @@ main {
 /* Parallax effect */
 
 .bg-content {
-   opacity: $opacity;
+    opacity: $opacity;
 }
 
 .bg-img {
-   min-height: 100vh;
-   background-size: cover;
-   background-attachment: fixed;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-color: $color2;
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $color2;
 }
 
 .bg-1 {
-   background-image: url('../images/img1.jpg');
+    background-image: url('../images/img1.jpg');
 }
 
 .bg-2 {
-   background-image: url('../images/img2.jpg');
+    background-image: url('../images/img2.jpg');
 }
 
 .bg-3 {
-   background-image: url('../images/img3.jpg');
+    background-image: url('../images/img3.jpg');
 }

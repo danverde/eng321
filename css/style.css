@@ -90,10 +90,13 @@ header {
     align-items: baseline; }
     header nav span {
       margin-right: auto; }
-    header nav a {
+    header nav a,
+    header nav a:visited {
       color: white;
       font-size: 14pt;
       margin: 0 15px; }
+    header nav a:hover {
+      color: #eaeaea; }
 
 /* individual sections */
 main {
@@ -142,15 +145,15 @@ main {
   height: 100%;
   width: 100%;
   max-width: 800px;
-  top: 0;
-  left: 100vw;
+  top: -100vh;
+  left: 0;
   padding: 20px;
   color: white;
   transition: all 1s; }
 
 .moveIn {
   opacity: 1;
-  left: 0px !important; }
+  top: 0vh; }
 
 /* End Scrolling effect */
 /* Parallax effect */
