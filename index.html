@@ -2,60 +2,95 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Document</title>
-    <script>
-        function toCenter(selector) {
-            var ele = document.querySelector(selector).classList.add('toCenter');
-            console.log('I Ran');
-        }
-    </script>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <title>Daniel Green</title>
 </head>
 
-<body onload="toCenter('#intro .scrollRight')">
-    <header class="all-caps">
-        <nav>
-            <span> Daniel Green</span>
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <a href="#"></a>
-        </nav>
-    </header>
-    <main>
-        <section class="bg-img bg-1 all-caps" id="intro">
-            <div class="scrollRight">
-                <h1 class="all-caps">&lt;Daniel Green/&gt;</h1>
-                <h3>&lt;Front End Web developer/&gt;</h3>
+<body onload="scrollBox('#intro .scrollBox')">
+   <header class="all-caps">
+      <nav>
+         <span> Daniel Green</span>
+         <a href="#about">About Me</a>
+         <a href="#projects">Projects</a>
+         <a href="#contact">Contact</a>
+         <a href="#"></a>
+      </nav>
+   </header>
+   <main>
+      <section class="bg-img bg-1 all-caps" id="intro">
+         <div class="sectionWrapper">
+            <div class="scrollBox">
+               <h1 class="all-caps">&lt;Daniel Green/&gt;</h1>
+               <h2>&lt;Front End Web developer/&gt;</h2>
             </div>
-        </section>
+         </div>
+      </section>
 
-        <section class="bg-content" id="about">
-            <div class="sectionWrapper">
-                <h2>About Me</h2>
-                <p>The first thing you need to know about me is that I'm a <span class="emphasis">small dog kind of guy</span>, an amateur photographer, and a car enthusiast. Now on to the boring stuff! </p>
-                <p>I'm currently a <span class="emphasis">student</span> and a part-time <span class="emphasis">Front-End Web Developer</span> for Brigham Young University-Idaho. When it comes to design, I believe that <span class="emphasis">simple is better</span>. I spend my days maintaing a section of the University homepage, slaving away on homework, and writing custom tools for pretty much any faculty member that asks.</p>
-                <p></p>
-                <p>I speak fluent <span class="emphasis">HTML5</span>, <span class="emphasis">CSS3</span>, <span class="emphasis">JavaScript</span>, and Spanish. I also know SASS, <span class="emphasis">NodeJS</span>, and SVG images. I am currently learning Angular4 and Python 2.7. I hope to learn C# and .NET before I graduate in early 2018.</p>
-                <p> I've studied PHP, mySQL, and Oracle SQL in the past, but they've gotten a bit rusty since I've focused on JavaScript. I'm more than happy to brush up on these skills if necessary.</p>
-                <p>I've got a <span class="emphasis">passion</span> for code and for the web. I know how to work hard and I love to learn! </p>
+      <section class="bg-content" id="about">
+         <div class="sectionWrapper">
+            <h2 class="headline">About Me</h2>
+            <p>The first thing you need to know about me is that I'm a <span class="emphasis">small dog kind of guy</span>, an amateur photographer, and a car enthusiast. Now on to the boring stuff! </p>
+            <p>I'm currently a <span class="emphasis">student</span> and a part-time <span class="emphasis">Front-End Web Developer</span> for Brigham Young University-Idaho. When it comes to design, I believe that <span class="emphasis">simple is better</span>. I spend my days maintaing a section of the University homepage, slaving away on homework, and writing custom tools for pretty much any faculty member that asks.</p>
+            <p></p>
+            <p>I speak fluent <span class="emphasis">HTML5</span>, <span class="emphasis">CSS3</span>, <span class="emphasis">JavaScript</span>, and Spanish. I also know SASS, <span class="emphasis">NodeJS</span>, and SVG images. I am currently learning Angular4 and Python 2.7. I hope to learn C# and .NET before I graduate in early 2018.</p>
+            <p> I've studied PHP, mySQL, and Oracle SQL in the past, but they've gotten a bit rusty since I've focused on JavaScript. I'm more than happy to brush up on these skills if necessary.</p>
+            <p>I've got a <span class="emphasis">passion</span> for code and for the web. I know how to work hard and I love to learn! </p>
+         </div>
+      </section>
+      <section class="bg-img bg-2"></section>
+      <section class="bg-content" id="projects">
+         <div class="sectionWrapper">
+            <div class="content">
+               <h2 class="headline">Projects</h2>
+               <p>Select a project to learn more.</p>
+               <a onclick="scrollBox('#prjOne')" class="button">Captivate Video Tutorials</a>
+               <a onclick="scrollBox('#prjTwo')" class="button">Map Project</a>
+               <a onclick="scrollBox('#prjThree')" class="button">Career Exploration</a>
             </div>
-        </section>
-        <section class="bg-img bg-2"></section>
-        <section claas="bg-content" id="projects">
-            <div class="sectionWrapper">
-                <h2>Projects</h2>
-                <p>Select a project to learn more.</p>
+            <div class="scrollBox" id="prjOne">
+               <h2 class="inline headline">Captivate Video Tutorial</h2>
+               <a class="button floatRight" onclick="scrollBox('#prjOne')">X</a>
+               <p>This project required 5 one-minute video tutorials on how to perform a simple task in either Adobe Photoshop or InDesign.</p>
+               <p>Select a subject to view the video:</p>
+               <p><a href="https://www.youtube.com/watch?v=vJDrbJE7PVo" target="_blank">Crop Tool</a></p>
+               <p><a href="https://www.youtube.com/watch?v=ka29voQ78eM" target="_blank">Dodge &amp; Burn Tools</a></p>
+               <p><a href="https://www.youtube.com/watch?v=Rg8c6gZrtH0" target="_blank">Image Rotation</a></p>
+               <p><a href="https://www.youtube.com/watch?v=Jf3oRl6Cl8Y" target="_blank">Layer Masks</a></p>
+               <p><a href="https://www.youtube.com/watch?v=rdvo1IdjQ1A" target="_blank">Layers</a></p>
             </div>
-        </section>
-        <section class="bg-img bg-3"></section>
-        <section claas="bg-content" id="contact">
-            <div class="sectionWrapper">
-                <h2>Contact</h2>
+            <div class="scrollBox" id="prjTwo">
+               <h2 class="inline headline">Map Project</h2>
+               <a class="button floatRight" onclick="scrollBox('#prjTwo')">X</a>
+               <p>When the map project is done I'll put an explanation here</p>
+               <p><a href="">A download to the PDF will go here</a></p>
+               <p><a href="">Maybe a link to a powerpoint? Probably not</a></p>
             </div>
-        </section>
-    </main>
+            <div class="scrollBox" id="prjThree">
+               <h2 class="inline headline">Career Exploration</h2>
+               <a class="button floatRight" onclick="scrollBox('#prjThree')">X</a>
+               <p>This project required 2 one-page summaries of entry-level jobs that I would love to pursue</p>
+               <p><a href="">A download of the first PDF</a></p>
+               <p><a href="">A download of the second PDF</a></p>
+            </div>
+         </div>
+      </section>
+      <section class="bg-img bg-3"></section>
+      <section claas="bg-content" id="contact">
+         <div class="sectionWrapper">
+            <h2 class="headline">Contact</h2>
+            <p>My personal info here. Come stalk me!! :D</p>
+         </div>
+      </section>
+   </main>
 </body>
+
+<script>
+   function scrollBox(selector) {
+      document.querySelector(selector).classList.toggle('moveIn');
+   }
+
+</script>
+<!--<script src="https://use.fontawesome.com/efcacc9f35.js"></script>-->
 
 </html>

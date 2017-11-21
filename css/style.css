@@ -4,6 +4,12 @@ body {
   padding: 0px;
   box-sizing: inherit; }
 
+.inline {
+  display: inline-block; }
+
+.floatRight {
+  float: right; }
+
 /* Default fonts */
 * {
   font-family: 'Roboto', sans-serif; }
@@ -13,10 +19,12 @@ body {
   font-weight: 700; }
 
 p {
-  text-indent: 2em;
   font-size: 14pt; }
 
 /* End fonts */
+ul li {
+  list-style: none; }
+
 h1,
 h2,
 h3,
@@ -30,11 +38,35 @@ h1 {
   font-size: 50pt; }
 
 h2 {
-  font-size: 30pt;
+  font-size: 30pt; }
+
+.headline {
   border-bottom: 1px solid #909090; }
 
 /* Default links */
+a,
+a:visited {
+  color: green; }
+
+a:hover {
+  color: #009f00; }
+
 /* End  Links*/
+/* Buttons */
+.button {
+  padding: 10px;
+  text-decoration: none;
+  background-color: green;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer; }
+  .button:hover {
+    background-color: #009f00;
+    color: white; }
+  .button:visited {
+    color: white; }
+
+/* End Buttons */
 .all-caps {
   text-transform: uppercase; }
 
@@ -77,22 +109,50 @@ main {
   align-items: center;
   justify-content: center;
   position: relative; }
-  #intro div {
+  #intro .scrollBox {
+    margin-top: -100px;
     color: #009f00;
     background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
     height: 300px;
     width: 700px; }
 
+#projects .scrollBox {
+  box-shadow: 10px 10px 5px #888888;
+  background-color: #eaeaea;
+  color: black; }
+  #projects .scrollBox h2 {
+    margin: 0 0 auto auto; }
+
+/* End Individual Sections */
 #about h2 {
   border-bottom: 1px solid #909090; }
 
+/* Scrolling effect */
 .sectionWrapper {
+  position: relative;
   width: 100%;
   max-width: 800px;
-  margin: 10vmin auto;
-  padding: 20px; }
+  margin: 10vmin auto; }
 
+.scrollBox {
+  z-index: 0;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+  top: 0;
+  left: 100vw;
+  padding: 20px;
+  color: white;
+  transition: all 1s; }
+
+.moveIn {
+  opacity: 1;
+  left: 0px !important; }
+
+/* End Scrolling effect */
 /* Parallax effect */
 .bg-content {
   opacity: 0.9; }
@@ -113,16 +173,5 @@ main {
 
 .bg-3 {
   background-image: url("../images/img3.jpg"); }
-
-/* TRANSITIONS */
-.scrollRight {
-  margin: auto;
-  position: absolute;
-  left: 100vw;
-  transition: left 1.5s, right 1.5s; }
-
-.toCenter {
-  left: 0 !important;
-  right: 0 !important; }
 
 /*# sourceMappingURL=style.css.map */
