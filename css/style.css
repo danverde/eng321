@@ -191,7 +191,8 @@ main {
   position: relative;
   width: 100%;
   max-width: 800px;
-  margin: 10vmin auto; }
+  margin: 10vmin auto;
+  padding: 0 20px; }
 
 .scrollBox {
   z-index: 0;
