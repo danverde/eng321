@@ -67,6 +67,38 @@ a:hover {
     color: white; }
 
 /* End Buttons */
+/* Forms */
+form {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  max-width: 500px; }
+
+input {
+  font-size: 12pt;
+  padding: 6px;
+  border: none;
+  border-radius: 5px; }
+
+textarea {
+  font-size: 12pt;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  display: block;
+  margin: 20px 0; }
+
+.fa-facebook-square {
+  color: #4267B2; }
+
+.fa-linkedin-square {
+  color: #0077B5; }
+
+.fa-github-square {
+  color: black; }
+
+/* End Forms */
 .all-caps {
   text-transform: uppercase; }
 
@@ -126,6 +158,29 @@ main {
   color: black; }
   #projects .scrollBox h2 {
     margin: 0 0 auto auto; }
+
+#contact .formWrapper {
+  margin-bottom: 20px;
+  padding-bottom: 20px; }
+
+.statusMsg {
+  width: 75%;
+  text-align: center;
+  border-radius: 5px;
+  display: block;
+  line-height: 2.4;
+  opacity: 0;
+  transition: opacity 1s; }
+
+.successMsg {
+  background-color: #bafdba;
+  border: 1px solid #19a819;
+  opacity: 1; }
+
+.errMsg {
+  background-color: #fdbaba;
+  border: 1px solid #a81919;
+  opacity: 1; }
 
 /* End Individual Sections */
 #about h2 {
