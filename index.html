@@ -38,7 +38,7 @@
                 <p>I've got a <span class="emphasis">passion</span> for code and for the web. I know how to work hard and I love to learn! </p>
             </div>
         </section>
-        <section class="bg-img bg-2"></section>
+        <!--<section class="bg-img bg-2"></section>-->
         <section class="bg-content" id="projects">
             <div class="sectionWrapper">
                 <div class="content">
@@ -51,7 +51,7 @@
                 <div class="scrollBox" id="prjOne">
                     <h2 class="inline headline">Captivate Video Tutorial</h2>
                     <a class="button floatRight" onclick="scrollBox('#prjOne')">X</a>
-                    <p>This project required 5 one-minute video tutorials on how to perform a simple task in either Adobe Photoshop or InDesign. The video tutorials were created using Adobe Captivate, and originally included closed captions written by myself. These captions were removed when I imported the videos to Youtube.</p>
+                    <p>This project required 5 one-minute video tutorials on how to perform a simple task in either Adobe Photoshop or InDesign. The video tutorials were created using Adobe Captivate.</p>
                     <p><a href="https://www.youtube.com/watch?v=vJDrbJE7PVo" target="_blank">Crop Tool</a></p>
                     <p><a href="https://www.youtube.com/watch?v=ka29voQ78eM" target="_blank">Dodge &amp; Burn Tools</a></p>
                     <p><a href="https://www.youtube.com/watch?v=Rg8c6gZrtH0" target="_blank">Image Rotation</a></p>
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-img bg-3"></section>
+        <!--<section class="bg-img bg-3"></section>-->
         <section claas="bg-content" id="contact">
             <div class="sectionWrapper">
                 <h2 class="headline">Contact Me</h2>
@@ -109,10 +109,12 @@
             }),
             msgContainer = document.querySelector('#contact .statusMsg');
 
+        /* remove err msg if it exists */
         if ([...msgContainer.classList].indexOf('errMsg')) {
             msgContainer.classList.remove('errMsg');
         }
             
+        /* if none of the inputs are empty, clear all and display sent message */
         if (inputValues.indexOf('') < 0) {
             formInputs.forEach((inputEle) => {
                 inputEle.value = '';
