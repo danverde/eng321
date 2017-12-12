@@ -1,13 +1,308 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="nojs html" lang="en-US">
+ <head>
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Daniel Green</title>
-</head>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2017.0.2.363"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <script type="text/javascript">
+   // Update the 'nojs'/'js' class on the html node
+document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
 
-<body onload="scrollBox('#intro .scrollBox')">
+// Check that all required assets are uploaded and up-to-date
+//if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "require.js", "index.css"], "outOfDate":[]};
+</script>
+	<title>Daniel Green</title>
+  <!-- CSS -->
+  <!--<link rel="stylesheet" type="text/css" href="css/site_global.css?crc=443350757"/>
+  <link rel="stylesheet" type="text/css" href="css/index.css?crc=441758433" id="pagesheet"/>-->
+    <!--custom head HTML-->
+  <meta charset="UTF-8">
+<script src="https://use.fontawesome.com/efcacc9f35.js"></script>
+<script>
+    function formSent() {
+        var formInputs = [document.querySelector('input[name="sender"]'),
+                document.querySelector('input[name="email"]'),
+                document.querySelector('textarea[name="message"]')
+            ],
+            inputValues = formInputs.map((inputEle) => {
+                return inputEle.value;
+            }),
+            msgContainer = document.querySelector('#contact .statusMsg');
+
+        /* remove err msg if it exists */
+        if ([...msgContainer.classList].indexOf('errMsg')) {
+            msgContainer.classList.remove('errMsg');
+        }
+            
+        /* if none of the inputs are empty, clear all and display sent message */
+        if (inputValues.indexOf('') < 0) {
+            formInputs.forEach((inputEle) => {
+                inputEle.value = '';
+            });
+            msgContainer.innerHTML = "Message Sent";
+            msgContainer.classList.toggle('successMsg');
+        } else {
+            msgContainer.innerHTML = "No fields can be blank";
+            msgContainer.classList.toggle('errMsg');
+        }
+    }
+
+    function scrollBox(selector) {
+        document.querySelector(selector).classList.toggle('moveIn');
+    }
+</script>
+
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,900");
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit; }
+
+.inline {
+  display: inline-block; }
+
+.floatRight {
+  float: right; }
+
+/* Default fonts */
+* {
+  font-family: 'Roboto', sans-serif; }
+
+.emphasis {
+  color: #009f00;
+  font-weight: 700; }
+
+p {
+  font-size: 14pt; }
+
+/* End fonts */
+ul li {
+  list-style: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  color: #009f00; }
+
+h1 {
+  font-size: 50pt; }
+
+h2 {
+  font-size: 30pt; }
+
+.headline {
+  border-bottom: 1px solid #909090; }
+
+/* Default links */
+a,
+a:visited {
+  color: green; }
+
+a:hover {
+  color: #009f00; }
+
+/* End  Links*/
+/* Buttons */
+.button {
+  padding: 10px;
+  text-decoration: none;
+  background-color: green;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer; }
+  .button:hover {
+    background-color: #009f00;
+    color: white; }
+  .button:visited {
+    color: white; }
+
+/* End Buttons */
+/* Forms */
+form {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  max-width: 500px; }
+
+input {
+  font-size: 12pt;
+  padding: 6px;
+  border: none;
+  border-radius: 5px; }
+
+textarea {
+  font-size: 12pt;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  display: block;
+  margin: 20px 0; }
+
+.fa-facebook-square {
+  color: #4267B2; }
+
+.fa-linkedin-square {
+  color: #0077B5; }
+
+.fa-github-square {
+  color: black; }
+
+/* End Forms */
+.all-caps {
+  text-transform: uppercase; }
+
+header {
+  z-index: 99;
+  background-color: #009f00;
+  height: 75px;
+  width: 100%;
+  border-bottom: 4px solid lightgray;
+  position: fixed;
+  opacity: 0.9;
+  color: white; }
+  header nav {
+    margin-top: 3px;
+    font-size: 18pt;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: baseline; }
+    header nav span {
+      margin-right: auto; }
+    header nav a,
+    header nav a:visited {
+      color: white;
+      font-size: 14pt;
+      margin: 0 15px; }
+    header nav a:hover {
+      color: #eaeaea; }
+
+/* individual sections */
+main {
+  margin: 0;
+  padding: 0;
+  background-color: lightgray; }
+  main section {
+    display: flex;
+    overflow: hidden; }
+
+#intro {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+  #intro .scrollBox {
+    margin-top: -100px;
+    color: #009f00;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    height: 300px;
+    width: 700px; }
+
+#projects .scrollBox {
+  box-shadow: 10px 10px 5px #888888;
+  background-color: #eaeaea;
+  color: black; }
+  #projects .scrollBox h2 {
+    margin: 0 0 auto auto; }
+#projects .fa {
+  padding-right: 20px !important; }
+
+#contact .formWrapper {
+  margin-bottom: 20px;
+  padding-bottom: 20px; }
+
+.statusMsg {
+  width: 75%;
+  text-align: center;
+  border-radius: 5px;
+  display: block;
+  line-height: 2.4;
+  opacity: 0;
+  transition: opacity 1s; }
+
+.successMsg {
+  background-color: #bafdba;
+  border: 1px solid #19a819;
+  opacity: 1; }
+
+.errMsg {
+  background-color: #fdbaba;
+  border: 1px solid #a81919;
+  opacity: 1; }
+
+/* End Individual Sections */
+#about h2 {
+  border-bottom: 1px solid #909090; }
+
+/* Scrolling effect */
+.sectionWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 10vmin auto;
+  padding: 0 20px; }
+
+.scrollBox {
+  z-index: 0;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+  top: -100vh;
+  left: 0;
+  padding: 20px;
+  color: white;
+  transition: all 1s; }
+
+.moveIn {
+  opacity: 1;
+  top: 0vh; }
+
+/* End Scrolling effect */
+/* Parallax effect */
+.bg-content {
+  opacity: 0.9; }
+
+.bg-img {
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: lightgray; }
+
+.bg-1 {
+  background-image: url("assets/img1.jpg"); }
+
+.bg-2 {
+  background-image: url("../images/img2.jpg"); }
+
+.bg-3 {
+  background-image: url("../images/img3.jpg"); }
+
+/*# sourceMappingURL=style.css.map */
+
+</style>
+ </head>
+ <body onload="scrollBox('#intro .scrollBox')">
+
+  <div class="clearfix borderbox" id="page"><!-- column -->
+   <div class="browser_width colelem" id="u94-bw">
+    <div id="u94"><!-- custom html -->
+     <div>
     <header class="all-caps">
         <nav>
             <span>Daniel Green</span>
@@ -96,42 +391,28 @@
             </div>
         </section>
     </main>
-</body>
-
-<script>
-    function formSent() {
-        var formInputs = [document.querySelector('input[name="sender"]'),
-                document.querySelector('input[name="email"]'),
-                document.querySelector('textarea[name="message"]')
-            ],
-            inputValues = formInputs.map((inputEle) => {
-                return inputEle.value;
-            }),
-            msgContainer = document.querySelector('#contact .statusMsg');
-
-        /* remove err msg if it exists */
-        if ([...msgContainer.classList].indexOf('errMsg')) {
-            msgContainer.classList.remove('errMsg');
-        }
-            
-        /* if none of the inputs are empty, clear all and display sent message */
-        if (inputValues.indexOf('') < 0) {
-            formInputs.forEach((inputEle) => {
-                inputEle.value = '';
-            });
-            msgContainer.innerHTML = "Message Sent";
-            msgContainer.classList.toggle('successMsg');
-        } else {
-            msgContainer.innerHTML = "No fields can be blank";
-            msgContainer.classList.toggle('errMsg');
-        }
-    }
-
-    function scrollBox(selector) {
-        document.querySelector(selector).classList.toggle('moveIn');
-    }
+</div>
+    </div>
+   </div>
+  </div>
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   window.Muse.assets.check=function(d){if(!window.Muse.assets.checked){window.Muse.assets.checked=!0;var b={},c=function(a,b){if(window.getComputedStyle){var c=window.getComputedStyle(a,null);return c&&c.getPropertyValue(b)||c&&c[b]||""}if(document.documentElement.currentStyle)return(c=a.currentStyle)&&c[b]||a.style&&a.style[b]||"";return""},a=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),
+16);return 0},g=function(g){for(var f=document.getElementsByTagName("link"),h=0;h<f.length;h++)if("text/css"==f[h].type){var i=(f[h].href||"").match(/\/?css\/([\w\-]+\.css)\?crc=(\d+)/);if(!i||!i[1]||!i[2])break;b[i[1]]=i[2]}f=document.createElement("div");f.className="version";f.style.cssText="display:none; width:1px; height:1px;";document.getElementsByTagName("body")[0].appendChild(f);for(h=0;h<Muse.assets.required.length;){var i=Muse.assets.required[h],l=i.match(/([\w\-\.]+)\.(\w+)$/),k=l&&l[1]?
+l[1]:null,l=l&&l[2]?l[2]:null;switch(l.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");f.className+=" "+k;k=a(c(f,"color"));l=a(c(f,"backgroundColor"));k!=0||l!=0?(Muse.assets.required.splice(h,1),"undefined"!=typeof b[i]&&(k!=b[i]>>>24||l!=(b[i]&16777215))&&Muse.assets.outOfDate.push(i)):h++;f.className="version";break;case "js":h++;break;default:throw Error("Unsupported file type: "+l);}}d?d().jquery!="1.8.3"&&Muse.assets.outOfDate.push("jquery-1.8.3.min.js"):Muse.assets.required.push("jquery-1.8.3.min.js");
+f.parentNode.removeChild(f);if(Muse.assets.outOfDate.length||Muse.assets.required.length)f="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",g&&Muse.assets.outOfDate.length&&(f+="\nOut of date: "+Muse.assets.outOfDate.join(",")),g&&Muse.assets.required.length&&(f+="\nMissing: "+Muse.assets.required.join(",")),alert(f)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?setTimeout(function(){g(!0)},5E3):g()}};
+var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.watch"],function(d){var $ = d;$(document).ready(function(){try{
+window.Muse.assets.check($);/* body */
+Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
+Muse.Utils.prepHyperlinks(true);/* body */
+Muse.Utils.resizeHeight('.browser_width');/* resize height */
+Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
+Muse.Utils.showWidgetsWhenReady();/* body */
+Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
+}catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
 
 </script>
-<script src="https://use.fontawesome.com/efcacc9f35.js"></script>
-
+  <!-- RequireJS script -->
+  <script src="scripts/require.js?crc=4234670167" type="text/javascript" async data-main="scripts/museconfig.js?crc=3849126041" onload="if (requirejs) requirejs.onError = function(requireType, requireModule) { if (requireType && requireType.toString && requireType.toString().indexOf && 0 <= requireType.toString().indexOf('#scripterror')) window.Muse.assets.check(); }" onerror="window.Muse.assets.check();"></script>
+   </body>
 </html>
